@@ -21,9 +21,9 @@ class Player:
     # independent of each other and the 'actual' position of the player, for animation and such.
     def CreatePlayer(self):
         self.player_node = render.attachNewNode("Player")
-        self.av = Actor("Models/Melody/melody.bam", {
-            "idle": "Models/Melody/anims/melody-Idle.bam",
-            "walk": "Models/Melody/anims/melody-Walk.bam",
+        self.av = Actor("../resources/Models/Melody/melody.bam", {
+            "idle": "../resources/Models/Melody/anims/melody-Idle.bam",
+            "walk": "../resources/Models/Melody/anims/melody-Walk.bam",
         })
         self.av.reparentTo(self.player_node)
         return self.av

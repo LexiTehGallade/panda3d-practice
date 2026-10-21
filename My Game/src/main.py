@@ -11,7 +11,7 @@ class WalkingGame(ShowBase):
         self.player = Player()
 
     def CreateWorld(self):
-        self.worldplane = loader.loadModel("Models/worldplane.bam")
+        self.worldplane = loader.loadModel("../resources/Models/worldplane.bam")
         self.world["Ground"] = self.worldplane
         self.world["Ground"].reparentTo(render)
         self.world["Ground"].setTwoSided(True)
