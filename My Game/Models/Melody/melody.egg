@@ -1,10 +1,8 @@
 <CoordinateSystem> { Z-Up }
 
-<Comment> {
-  "egg-optchar -d 'generic_woman\eggs' generic_woman.egg generic_woman-Idle.egg generic_woman-Walk.egg"
-}
+
 <Texture> Untitled {
-  "../tex/generic_woman.png"
+  "./tex/melody.png"
   <Scalar> wrap { repeat }
   <Scalar> minfilter { linear_mipmap_linear }
   <Scalar> magfilter { linear_mipmap_linear }
