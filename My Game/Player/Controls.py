@@ -1,6 +1,8 @@
 from direct.showbase import DirectObject
 from panda3d.core import LVector3f
 import sys
+from direct.task import Task
+from Player import AvatarFSM as AvFSM
 
 
 class PlayerControls(DirectObject.DirectObject):
@@ -30,7 +32,7 @@ class PlayerControls(DirectObject.DirectObject):
         self.accept("s-up", self.walk, extraArgs=[1])
         self.accept("a", self.walk, extraArgs=[4])
         self.accept("a-up", self.walk, extraArgs=[3])
-        self.av_fsm = AvatarFSM(av)
+        self.av_fsm = AvFSM.AvatarFSM(av)
 
     def walk(self,direction):
         if self.vector_math[direction][1] == "X":
