@@ -3,9 +3,7 @@ from Player import Controls
 from Player import Camera
 
 
-# It also handles the player controls, and the avatar FSM.
-# todo: Split these classes into separate files where appropriate.
-
+# Instantiates the player, avatar, and camera
 class Player:
     # Player class: handles creating the player reference node, the avatar actor, and the third person camera.
     def __init__(self):
