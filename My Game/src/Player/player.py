@@ -7,6 +7,8 @@ from Player import Camera
 class Player:
     # Player class: handles creating the player reference node, the avatar actor, and the third person camera.
     def __init__(self):
+        self.modeldir = "../resources/Models/Melody"
+        self.animdir = "../resources/Models/Melody/anims"
         self.player_node = None
         self.av = self.CreatePlayer()
         self.av.setScale(0.8)
@@ -19,9 +21,9 @@ class Player:
     # independent of each other and the 'actual' position of the player, for animation and such.
     def CreatePlayer(self):
         self.player_node = render.attachNewNode("Player")
-        self.av = Actor("../resources/Models/Melody/melody.bam", {
-            "idle": "../resources/Models/Melody/anims/melody-Idle.bam",
-            "walk": "../resources/Models/Melody/anims/melody-Walk.bam",
+        self.av = Actor(f"{self.modeldir}/melody.bam", {
+            "idle": f"{self.animdir}/melody-Idle.bam",
+            "walk": f"{self.animdir}/melody-Walk.bam",
         })
         self.av.reparentTo(self.player_node)
         return self.av
