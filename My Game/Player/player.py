@@ -22,8 +22,8 @@ class Player:
     def CreatePlayer(self):
         self.player_node = render.attachNewNode("Player")
         self.av = Actor("Models/Melody/melody.bam", {
-            "idle": "Models/Melody/melody-Idle.bam",
-            "walk": "Models/Melody/melody-Walk.bam",
+            "idle": "Models/Melody/anims/melody-Idle.bam",
+            "walk": "Models/Melody/anims/melody-Walk.bam",
         })
         self.av.reparentTo(self.player_node)
         return self.av
