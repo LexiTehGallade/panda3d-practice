@@ -7,7 +7,7 @@ from Player import AvatarFSM as AvFSM
 
 class PlayerControls(DirectObject.DirectObject):
     # PlayerControls: Handles the event listener and velocity for the player's actual movement.
-    def __init__(self, av, playernode, camnode):
+    def __init__(self, av, playernode):
         super().__init__()
         self.vector_math = {
             1: (-1, "Y"),  # North down, South up
@@ -16,7 +16,6 @@ class PlayerControls(DirectObject.DirectObject):
             4: (1, "X")  # East up, West down
         }
         self.avatar = av
-        self.camera = camnode
         self.X_vel = 0
         self.Y_vel = 0
         self.movementV = LVector3f(0, 0, 0)

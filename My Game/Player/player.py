@@ -14,7 +14,7 @@ class Player:
         self.av.setScale(0.8)
         self.av.loop("idle")
         self.camera = self.InitializeCamera()
-        self.controls = Controls.PlayerControls(self.av, self.player_node, self.camera)
+        self.controls = Controls.PlayerControls(self.av, self.player_node)
         taskMgr.add(self.mouseTask,"MouseResetPos")
 
     # Doing it this way lets us move/rotate the camera and avatar,
